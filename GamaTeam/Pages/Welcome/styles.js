@@ -1,6 +1,12 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
+    main: {
+      padding: 10,
+      backgroundColor: '#202642',
+      color: '#f8f9fb',
+      gap: 20
+    },
     container: {
       flex: 1,
       backgroundColor: '#202642',
@@ -8,6 +14,9 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       color: '#f8f9fb',
       gap: 20
+    },
+    rowContainer: {
+      flexDirection: 'row'
     },
     defaultText : {
       color: '#f8f9fb',
@@ -18,15 +27,26 @@ const styles = StyleSheet.create({
       color: '#fff',
       borderBottomWidth: 2,
       borderBottomColor: '#fff',
-      // padding: 10,
       margin:10
     },
     input : {
       height: 30,
-      padding:5
+      padding:5,
+      color: '#fff',
+      backgroundColor: 'transparent'
+    },
+    pageTitleHeader : {
+      fontSize: 'xx-large',
+      fontWeight: 'bold',
+      color: '#fff',
+      width:"50%"
+    },
+    image: {
+      width: 100,
+      height:100,
+      borderRadius: "50%"
     }
-
   });
   
 
-  export {styles}
+  export { styles }
