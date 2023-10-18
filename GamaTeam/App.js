@@ -12,10 +12,10 @@ export default function App() {
     <NavigationContainer>
       <UsersProvider>
         <Stack.Navigator>
+          <Stack.Screen name='Users' options={{headerShown:false}} component={UsersPage} />
           <Stack.Screen name="Welcome" options={{headerShown:false}} component={WelcomePage} />
           <Stack.Screen name="Login" component={LoginPage} />
           <Stack.Screen name="SignUp" component={SignUpPage} />
-          <Stack.Screen name='Users' options={{headerShown:false}} component={UsersPage} />
         </Stack.Navigator>
       </UsersProvider>
     </NavigationContainer>

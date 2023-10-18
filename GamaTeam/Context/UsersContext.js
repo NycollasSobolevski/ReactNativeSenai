@@ -1,11 +1,18 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 
 export const UsersContext = createContext();
 UsersContext.displayName = 'UsersContext';
 
 export const UsersProvider = ({ children }) => {
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([
+        {Name: "nyco", Email: "nyc@email.com", Age: "21", Password: "123", Notify: true, Gender: "Male"},
+        {Name: "nyco", Email: "nyc@email.com", Age: "21", Password: "123", Notify: true, Gender: "Male"},
+        {Name: "nyco", Email: "nyc@email.com", Age: "21", Password: "123", Notify: true, Gender: "Male"}]);
+
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(users))
+    },[users])
 
     function addUser(user) {
         setUsers([...users, user]);
